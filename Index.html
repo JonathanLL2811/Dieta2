@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Dieta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #030303; /* Fondo oscuro que solicitaste */
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1, h3 { /* Aplicar a h1 y h3 */
+            color: #343a40;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .table thead th {
+            background-color: #007bff;
+            color: white;
+            border-color: #000000; /* Borde de cabecera oscuro que solicitaste */
+        }
+        .table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .table-bordered th, .table-bordered td {
+            border: 1px solid #dee2e6;
+        }
+        .meal-time {
+            font-weight: bold;
+            background-color: #e9ecef;
+            color: #495057;
+        }
+        .notes {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            border-radius: 5px;
+            color: #664d03;
+        }
+        .notes strong {
+            color: #000;
+        }
+        /* Estilos para el botón de WhatsApp */
+        .whatsapp-button-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .whatsapp-button {
+            background-color: #25D366; /* Color oficial de WhatsApp */
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px; /* Botón más redondeado */
+            text-decoration: none;
+            font-size: 1.2em;
+            display: inline-flex; /* Para alinear el icono y el texto */
+            align-items: center;
+            gap: 10px; /* Espacio entre icono y texto */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+        }
+        .whatsapp-button:hover {
+            background-color: #1DA851; /* Un verde un poco más oscuro al pasar el ratón */
+            color: white; /* Mantener el color del texto blanco en hover */
+        }
+        .whatsapp-button i {
+            font-size: 1.5em; /* Tamaño del icono */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="mb-4">Plan de Dieta</h1>
+        <h3 class="mb-4">15 días para Eric</h3>
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Lunes</th>
+                        <th scope="col">Martes</th>
+                        <th scope="col">Miércoles</th>
+                        <th scope="col">Jueves</th>
+                        <th scope="col">Viernes</th>
+                        <th scope="col">Sábado</th>
+                        <th scope="col">Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="meal-time">Desayuno</td>
+                        <td>Ayuno</td>
+                        <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
+                        <td>Ayuno</td>
+                        <td>Ayuno</td>
+                        <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
+                        <td>Ayuno</td>
+                        <td>Ayuno</td>
+                    </tr>
+                    <tr>
+                        <td class="meal-time">3pm <br>(Almuerzo)</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Ayuno</td>
+                        <td>Una lata de atún en agua con dos galletas de soda de la azul, un aguacate.</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Ayuno</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Ayuno</td>
+                    </tr>
+                    <tr>
+                        <td class="meal-time">7pm <br>(Cena)</td>
+                        <td>5 huevos cocidos con 1 aguacate.</td>
+                        <td>Una lata de atún en agua con dos galletas de soda de la azul, un aguacate.</td>
+                        <td>5 huevos cocidos con 1 aguacate.</td>
+                        <td>3 huevos cocidos con 1 aguacate.</td>
+                        <td>5 huevos cocidos con 1 aguacate.</td>
+                        <td>5 huevos cocidos con 1 aguacate.</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="notes">
+            <p><strong>Notas importantes:</strong></p>
+            <ul>
+                <li>Sin sodas. Sin agregar sal.</li>
+                <li>Si tienes hambre toma té verde sin azúcar.</li>
+                <li>No te pases de las horas de comida. Tu última comida 7pm.</li>
+                <li>Si en la noche da hambre solo toma agua y si es mucha el hambre que no puede dormir coma uvas verdes.</li>
+                <li>Si en el día siente hambre coma uvas verdes, semillas, una manzana verde.</li>
+                <li>Las meriendas no cuentan en los ayunos.</li>
+                <li>Al levantarse tomar vaso y medio de agua LIMPIA</li>
+            </ul>
+        </div>
+
+        <div class="whatsapp-button-container">
+            <a href="https://wa.me/50498013702" class="whatsapp-button" target="_blank">
+                <i class="fab fa-whatsapp"></i> Dudas? Escribame o llameme
+            </a>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
