@@ -9,8 +9,9 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #030303; /* Fondo oscuro que solicitaste */
+            background-color: #030303; /* Fondo oscuro */
             padding: 20px;
+            color: #343a40; /* Color de texto predeterminado para el cuerpo */
         }
         .container {
             background-color: #ffffff;
@@ -18,7 +19,7 @@
             border-radius: 8px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-        h1, h3 { /* Aplicar a h1 y h3 */
+        h1, h3 {
             color: #343a40;
             margin-bottom: 30px;
             text-align: center;
@@ -30,7 +31,7 @@
         .table thead th {
             background-color: #007bff;
             color: white;
-            border-color: #000000; /* Borde de cabecera oscuro que solicitaste */
+            border-color: #000000;
         }
         .table tbody tr:nth-child(even) {
             background-color: #f2f2f2;
@@ -67,18 +68,49 @@
             border-radius: 50px; /* Botón más redondeado */
             text-decoration: none;
             font-size: 1.2em;
-            display: inline-flex; /* Para alinear el icono y el texto */
+            display: inline-flex;
             align-items: center;
-            gap: 10px; /* Espacio entre icono y texto */
+            gap: 10px;
             transition: background-color 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidad */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .whatsapp-button:hover {
-            background-color: #1DA851; /* Un verde un poco más oscuro al pasar el ratón */
-            color: white; /* Mantener el color del texto blanco en hover */
+            background-color: #1DA851;
+            color: white;
         }
         .whatsapp-button i {
-            font-size: 1.5em; /* Tamaño del icono */
+            font-size: 1.5em;
+        }
+        /* Estilos para el video responsivo */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+            height: 0;
+            overflow: hidden;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-radius: 8px; /* Bordes redondeados para el contenedor del video */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            background-color: #000; /* Fondo negro mientras carga o si no hay video */
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* Estilos para el pie de página */
+        .footer-social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        .footer-social-icons a:hover {
+            color: #007bff; /* Color de hover para los iconos sociales */
         }
     </style>
 </head>
@@ -86,7 +118,7 @@
 
     <div class="container">
         <h1 class="mb-4">Plan de Dieta</h1>
-        <h3 class="mb-4">15 días para Lesly</h3>
+        <h3 class="mb-4">25 dias de dieta</h3>
 
         <div class="table-responsive">
             <table class="table table-bordered table-hover">
@@ -106,38 +138,39 @@
                     <tr>
                         <td class="meal-time">Desayuno</td>
                         <td>Ayuno</td>
-                        <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
                         <td>Ayuno</td>
                         <td>Ayuno</td>
-                        <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
+                        <td>Ayuno</td>
+                        <td>Ayuno</td>
                         <td>Ayuno</td>
                         <td>Ayuno</td>
                     </tr>
                     <tr>
                         <td class="meal-time">3pm <br>(Almuerzo)</td>
-                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
-                        <td>Ayuno</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
                         <td>Una lata de atún en agua con dos galletas de soda de la azul, un aguacate.</td>
-                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
-                        <td>Ayuno</td>
-                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
-                        <td>Ayuno</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
                     </tr>
                     <tr>
                         <td class="meal-time">7pm <br>(Cena)</td>
-                        <td>3 huevos cocidos con 1 aguacate.</td>
-                        <td>Una lata de atún en agua con dos galletas de soda de la azul, un aguacate.</td>
-                        <td>3 huevos cocidos con 1 aguacate.</td>
-                        <td>>Ayuno.</td>
                         <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
                         <td>3 huevos cocidos con 1 aguacate.</td>
-                        <td>Una pechuga cocida sin piel, ensalada de lechuga con un aguacate, un pepino y semillas. Si usa aderezo prepárelo con agua.</td>
+                        <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
+                        <td>3 huevos cocidos con 1 aguacate.</td>
+                        <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
+                        <td>3 huevos cocidos con 1 aguacate.</td>
+                        <td>Licuado de manzana verde y uvas verdes con agua. Hágalo espeso para que le mantenga.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h3 class="text-center mt-5 mb-3">Rutina de ejercicios EN AYUNAS</h3>
+        
+<h3 class="text-center mt-5 mb-3">Rutina de ejercicios EN AYUNAS</h3>
         <div class="video-container">
             <iframe src="https://www.youtube.com/embed/IiAJz6WCHvc?si=K4sZGN0akCz_iDvt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
@@ -154,16 +187,17 @@
             </ul>
         </div>
 
-
         <div class="whatsapp-button-container">
             <a href="https://wa.me/50498013702" class="whatsapp-button" target="_blank">
                 <i class="fab fa-whatsapp"></i> Dudas? Escribame o llameme
+                
             </a>
             <footer>Jonathan Jesus Lorenzana Lemus</footer>
         </div>
 
     </div>
 
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
